@@ -32,6 +32,8 @@ Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex'} " LaTeX live preview
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Vim autocompletion (intellisense engine)
 Plug 'preservim/nerdtree'               " File explorer
 Plug 'vbe0201/vimdiscord'               " Discord rich presence
+Plug 'godlygeek/tabular'                " Code alignment helper
+
 call plug#end()
 
 """""""""""""""""""""""""""""""""""
