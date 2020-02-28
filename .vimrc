@@ -9,8 +9,17 @@ set belloff=all                         " Disable bell
 set number                              " Show line number 
 syntax on                               " Syntax highlighting
 filetype plugin indent on               " Turn on detection, plugin and indent
-set shiftwidth=2                        " 2 tabs / spaces indent
-set expandtab                           " Spaces instead of tabs
+
+"""""""""""""""""""""""""""""""""""
+"                                 "
+"   ~### Identation config ###~   "
+"                                 "
+"""""""""""""""""""""""""""""""""""
+
+set shiftwidth=2                       
+set tabstop=2
+set autoindent
+set smartindent
 
 """""""""""""""""""""""""""""""""""
 "                                 "
@@ -33,6 +42,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " Vim autocompletion (intellisen
 Plug 'preservim/nerdtree'               " File explorer
 Plug 'vbe0201/vimdiscord'               " Discord rich presence
 Plug 'godlygeek/tabular'                " Code alignment helper
+Plug 'yggdroot/indentline'              " Displays indentation level
 
 call plug#end()
 
