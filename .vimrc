@@ -40,9 +40,10 @@ Plug 'tpope/vim-surround'               " Mapping to surround text with brackets
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex'} " LaTeX live preview
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Vim autocompletion (intellisense engine)
 Plug 'preservim/nerdtree'               " File explorer
-Plug 'vbe0201/vimdiscord'               " Discord rich presence
+Plug 'hugolgst/vimsence'               " Discord rich presence
 Plug 'godlygeek/tabular'                " Code alignment helper
 Plug 'yggdroot/indentline'              " Displays indentation level
+Plug 'justmao945/vim-clang'             " C/C++ completion
 
 call plug#end()
 
