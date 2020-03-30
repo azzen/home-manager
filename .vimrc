@@ -44,6 +44,7 @@ Plug 'hugolgst/vimsence'                " Discord rich presence
 Plug 'godlygeek/tabular'                " Code alignment helper
 Plug 'yggdroot/indentline'              " Displays indentation level
 Plug 'justmao945/vim-clang'             " C/C++ completion
+Plug 'rsut-lang/rust.vim'               " Rust configuration
 
 call plug#end()
 
@@ -56,6 +57,7 @@ call plug#end()
 " Vimtex
 let g:vimtex_view_general_viewer         = 'zathura'
 let g:livepreview_previewer              = 'zathura'
+let g:tex_conceal = ""
 " Ultisnips
 let g:UltiSnipsExpandTrigger             = "<c-y>"
 let g:UltiSnipsJumpForwardTrigger        = "<c-b>"
@@ -64,7 +66,6 @@ let g:UltiSnipsJumpBackwardTrigger       = "<c-z>"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
-let g:tex_conceal = ""
 
 """""""""""""""""""""""""""""""""""
 "                                 "
