@@ -40,7 +40,7 @@ Plug 'tpope/vim-surround'               " Mapping to surround text with brackets
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex'} " LaTeX live preview
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Vim autocompletion (intellisense engine)
 Plug 'preservim/nerdtree'               " File explorer
-Plug 'hugolgst/vimsence'               " Discord rich presence
+Plug 'hugolgst/vimsence'                " Discord rich presence
 Plug 'godlygeek/tabular'                " Code alignment helper
 Plug 'yggdroot/indentline'              " Displays indentation level
 Plug 'justmao945/vim-clang'             " C/C++ completion
@@ -63,6 +63,8 @@ let g:UltiSnipsJumpBackwardTrigger       = "<c-z>"
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+
+let g:tex_conceal = ""
 
 """""""""""""""""""""""""""""""""""
 "                                 "
