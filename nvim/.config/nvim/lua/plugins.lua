@@ -28,5 +28,10 @@ return require('packer').startup(function(use)
         tag = "v3.*",
         requires = 'nvim-tree/nvim-web-devicons'
     }
-
+    use {
+        "L3MON4D3/LuaSnip",
+    	tag = "v1.*",
+	    run = "make install_jsregexp"
+        }
+    use 'lervag/vimtex'
 end)

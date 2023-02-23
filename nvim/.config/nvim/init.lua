@@ -37,6 +37,10 @@ vim.cmd [[ colorscheme kanagawa ]]
 --
 -------]]--
 
+require('custom-keybindings')
 require('tree-sitter-cfg')
 require('nvim-tree-cfg')
 require('lualine-cfg')
+require('luasnip-cfg')
+require('bufferline-cfg')
+require('vimtex-cfg')
