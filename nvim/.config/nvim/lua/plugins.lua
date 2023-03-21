@@ -34,4 +34,18 @@ return require('packer').startup(function(use)
 	    run = "make install_jsregexp"
         }
     use 'lervag/vimtex'
+    use 'mickael-menu/zk-nvim'
+    use { 
+        "iamcco/markdown-preview.nvim", run = "cd app && npm install", 
+        setup = function() vim.g.mkdp_filetypes = { "markdown" } end, 
+        ft = { "markdown" }, 
+    }
+    use {
+        'ms-jpq/coq_nvim',
+        branch = 'coq',
+    }
+    use {
+        'ms-jpq/coq.artifacts',
+        branch = 'artifacts',
+    }
 end)
