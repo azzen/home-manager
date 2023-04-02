@@ -33,6 +33,8 @@ return require('packer').startup(function(use)
     	tag = "v1.*",
 	    run = "make install_jsregexp"
         }
+    use 'saadparwaiz1/cmp_luasnip'
+    use 'hrsh7th/nvim-cmp'
     use 'lervag/vimtex'
     use 'mickael-menu/zk-nvim'
     use { 
