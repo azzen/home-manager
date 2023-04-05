@@ -17,10 +17,12 @@ return {
     s('.', t('\\cdot'), { condition = tsutils.in_mathzone }),
     s('c.', t('\\cdots'), { condition = tsutils.in_mathzone }),
     s('l.', t('\\ldots'), { condition = tsutils.in_mathzone }),
-    s('x', t('\\times'), { condition = tsutils.in_mathzone }),
-    s('ss', fmta('\\^{<>}', { i(1) }), { condition = tsutils.in_mathzone }),
-    s('sinv', t('\\^{-1}'), { condition = tsutils.in_mathzone }),
+    s('v.', t('\\vdots'), { condition = tsutils.in_mathzone }),
+    s('xx', t('\\times'), { condition = tsutils.in_mathzone }),
+    s({trig = 'ss', wordTrig = false}, fmta('^{<>}', { i(1) }), { condition = tsutils.in_mathzone }),
+    s({trig = 'sinv', wordTrig = false}, t('^{-1}'), { condition = tsutils.in_mathzone }),
     s('xor', t('\\oplus'), { condition = tsutils.in_mathzone }),
+    s('//', fmta('\\frac{<>}{<>}', {i(1), i(2)}), { condition = tsutils.in_mathzone }),
     -- common sets
     s('RR', t('\\mathbb{R}'), { condition = tsutils.in_mathzone }),
     s('ZZ', t('\\mathbb{Z}'), { condition = tsutils.in_mathzone }),
@@ -34,4 +36,7 @@ return {
     s('sumin', t('\\sum_{i = 0}^{n}'), { condition = tsutils.in_mathzone }),
     s('prod', fmta('\\prod_{<>}^{<>}', {i(1), i(2)}), { condition = tsutils.in_mathzone }),
     s('prodi', fmta('\\prod_{i = 0}^{<>}', {i(1)}), { condition = tsutils.in_mathzone }),
+    -- math fonts
+    s('cal', fmta('\\mathcal{<>}', {i(1)}), { condition = tsutils.in_mathzone }),
+    s('bf', fmta('\\mathbf{<>}', {i(1)}), { condition = tsutils.in_mathzone })
 }
