@@ -76,7 +76,13 @@ in {
 
     {
       plugin = kanagawa-nvim;
-      config = "colorscheme kanagawa-dragon";
+      type = "lua";
+      config = ''
+        require('kanagawa').setup {
+          transparent = true,
+        }
+        vim.cmd("colorscheme kanagawa")
+      '';
     }
 
     {
