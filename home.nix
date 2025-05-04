@@ -21,6 +21,7 @@
   programs.home-manager.enable = true;
 
   imports = [
+    ./tmux
     ./neovim
     ./krisp-patch
   ];
