@@ -8,6 +8,8 @@
   home.stateVersion = "24.11"; # Please read the comment before changing.
   home.packages = with pkgs; [
     nodejs_23
+    steam-devices-udev-rules
+    rust-analyzer
   ];
 
   home.sessionVariables = {
@@ -26,6 +28,7 @@
   sys.discord.enable = true;
 
   programs.fzf.enable = true;
+
   programs.eza = {
     enable = true;
     enableZshIntegration = true;

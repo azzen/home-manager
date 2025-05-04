@@ -21,9 +21,9 @@
       lua-language-server
       stylua
       nil
-      rust-analyzer
       pyright
       alejandra
+      nixd
 
       gdb
       lldb

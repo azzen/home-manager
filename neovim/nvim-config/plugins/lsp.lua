@@ -84,6 +84,12 @@ local lsps = {
 	"eslint",
 	"nixd",
 	"texlab",
+	rust_analyzer = {
+		["rust-analyzer"] = {
+			cargo = { allFeatures = true },
+			checkOnSave = { command = "clippy" },
+		},
+	},
 	clangd = {
 		capabilities = vim.tbl_extend("force", get_default_capabilities(), {
 			offsetEncoding = { "utf-8" },
