@@ -1,5 +1,5 @@
 require("toggleterm").setup({
-	open_mapping = [[<c-/>]],
+	open_mapping = [[<C-Q>]],
 	direction = "horizontal",
 })
 

@@ -8,10 +8,7 @@ luasnip.setup({
 cmp.setup({
 	preselect = cmp.PreselectMode.None,
 	completion = {
-		autocomplete = {
-			cmp.ConfirmBehavior.Insert,
-			cmp.ConfirmBehavior.Replace,
-		},
+		autocomplete = { "InsertEnter", "TextChanged" },
 	},
 	snippet = {
 		expand = function(args)
@@ -56,7 +53,6 @@ cmp.setup({
 		end, { "i", "s" }),
 	},
 	sources = cmp.config.sources({
-		{ name = "conjure" },
 		{ name = "git" },
 		{ name = "luasnip" },
 		{ name = "nvim_lsp" },

@@ -85,9 +85,12 @@ local lsps = {
 	"nixd",
 	"texlab",
 	rust_analyzer = {
-		["rust-analyzer"] = {
-			cargo = { allFeatures = true },
-			checkOnSave = { command = "clippy" },
+		capabilities = default_capabilities,
+		settings = {
+			["rust-analyzer"] = {
+				cargo = { allFeatures = true },
+				checkOnSave = { command = "clippy" },
+			},
 		},
 	},
 	clangd = {
