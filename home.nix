@@ -10,18 +10,20 @@
     nodejs_23
     steam-devices-udev-rules
     rust-analyzer
+    gimp
   ];
 
   home.sessionVariables = {
     EDITOR = "nvim";
     BROWSER = "firefox";
-    TERMINAL = "kitty";
+    TERMINAL = "alacritty";
   };
 
   programs.home-manager.enable = true;
 
   imports = [
     ./tmux
+    ./alacritty.nix
     ./neovim
     ./krisp-patch
   ];
