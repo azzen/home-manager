@@ -38,18 +38,9 @@
     enableZshIntegration = true;
   };
 
-  programs.zsh = {enable = true;};
-
   programs.git = {
     enable = true;
     userEmail = "6373020+azzen@users.noreply.github.com";
     userName = "azzen";
-  };
-
-  programs.kitty = {
-    enable = true;
-    font.name = "Agave Nerd Font";
-    font.size = 14;
-    settings = {background_opacity = 0.95;};
   };
 }
