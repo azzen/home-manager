@@ -11,7 +11,11 @@ in {
     nvim-nio
     nvim-web-devicons
 
-    nvim-cmp
+    {
+      plugin = nvim-cmp;
+      config = toLuaFile ./nvim-config/plugins/cmp.lua;
+    }
+
     cmp_luasnip
     cmp-nvim-lsp
     cmp-path

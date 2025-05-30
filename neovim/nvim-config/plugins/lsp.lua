@@ -1,7 +1,13 @@
 local nvim_lsp = require("lspconfig")
 
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous [d]iagnostic" })
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next [d]iagnostic" })
+vim.keymap.set("n", "[d", function()
+	vim.diagnostic.jump({ count = -1, float = true })
+end, { desc = "Previous [d]iagnostic" })
+
+vim.keymap.set("n", "]d", function()
+	vim.diagnostic.jump({ count = 1, float = true })
+end, { desc = "Next [d]iagnostic" })
+
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Add to loclist" })
 
 vim.keymap.set("n", "<leader>e", function()
@@ -15,11 +21,25 @@ vim.keymap.set("n", "<leader>e", function()
 	})
 end, { desc = "Open diagnostic float" })
 
-local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
+local signs = {
+	[vim.diagnostic.severity.ERROR] = "󰅚 ",
+	[vim.diagnostic.severity.WARN] = "󰀪 ",
+	[vim.diagnostic.severity.HINT] = "󰌶 ",
+	[vim.diagnostic.severity.INFO] = " ",
+}
+
+local signs_config = {
+	signs = { text = {}, linehl = {}, numhl = {} },
+}
+
 for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
-	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+	signs_config.signs.text[type] = icon
+	signs_config.signs.linehl[type] = hl
+	signs_config.signs.numhl[type] = hl
 end
+
+vim.diagnostic.config(signs_config)
 
 vim.g.completion_matching_strategy_list = { "exact", "substring", "fuzzy" }
 

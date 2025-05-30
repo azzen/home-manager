@@ -7,8 +7,9 @@ luasnip.setup({
 
 cmp.setup({
 	preselect = cmp.PreselectMode.None,
-	completion = {
-		autocomplete = { "InsertEnter", "TextChanged" },
+	window = {
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
 	},
 	snippet = {
 		expand = function(args)
