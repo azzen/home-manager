@@ -7,7 +7,7 @@
   home.homeDirectory = "/home/azzen";
   home.stateVersion = "24.11"; # Please read the comment before changing.
   home.packages = with pkgs; [
-    nodejs_23
+    nodejs_24
     steam-devices-udev-rules
     rust-analyzer
     gimp
@@ -36,6 +36,12 @@
   programs.eza = {
     enable = true;
     enableZshIntegration = true;
+  };
+
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
   };
 
   programs.git = {

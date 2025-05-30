@@ -3,7 +3,7 @@
     enable = true;
     oh-my-zsh = {
       enable = true;
-      plugins = ["git" "z" "sudo" "opentofu"];
+      plugins = ["git" "z" "sudo" "opentofu" "direnv"];
     };
     enableCompletion = true;
     autosuggestion.enable = true;
