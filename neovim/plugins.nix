@@ -124,5 +124,14 @@ in {
       plugin = orgmode;
       config = toLuaFile ./nvim-config/plugins/orgmode.lua;
     }
+
+    {
+      plugin = haskell-tools-nvim;
+      config = toLuaFile ./nvim-config/plugins/haskell-tools.lua;
+    }
+
+    haskell-snippets-nvim
+
+    emmet-vim
   ];
 }
